@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model atualizar_cadastro {
+  ID   Int     @id
+  nome String? @db.VarChar(45)
+  cpf  Int?
+}
